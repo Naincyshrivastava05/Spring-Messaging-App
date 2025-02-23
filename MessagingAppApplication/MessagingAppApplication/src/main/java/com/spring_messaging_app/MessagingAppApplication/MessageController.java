@@ -1,13 +1,14 @@
 package com.spring_messaging_app.MessagingAppApplicaton;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class MessagingAppApplication {
+import org.springframework.web.bind.annotation.*;
 
-    public static void main(String[] args) {
-        SpringApplication.run(MessagingAppApplication.class, args);
+@RestController
+@RequestMapping("/hello")
+public class MessageController {
+
+    @GetMapping
+    public String sayHello() {
+        return "Hello from BridgeLabz";
     }
-
 }
