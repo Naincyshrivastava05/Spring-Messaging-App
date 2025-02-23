@@ -16,4 +16,8 @@ public class MessageController {
     public String sayHello(@RequestParam String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+    @GetMapping("/param/{name}")
+    public String sayHello1(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
